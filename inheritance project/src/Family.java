@@ -1,14 +1,18 @@
 // superclass
-public class Family
+public abstract class Family
 	{
-		private String food;
-		public void prepareDinner(String f)
+		protected String food; // instance variable
+
+		public void prepareDinner(String f) // overridden method
 			{
 				food = f;
-				System.out.println("Chi, make the " + food + ".");
+				System.out.println("Prepare the " + food + ".");
 			}
-		public void buyGroceries()
+
+		public void buyGroceries() // method
 			{
 				System.out.println("Can we get snacks?");
 			}
+
+		public abstract void sleepLate(); // abstract method
 	}

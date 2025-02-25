@@ -1,14 +1,22 @@
 // subclass
 public class Sister extends Family
 	{
-		private String food;
-		public void prepareDinner(String f)
+		protected String food; // instance variable
+
+		public void prepareDinner(String f) // method
 			{
+				super.prepareDinner("shrimp"); // super that accesses overridden method
 				food = f;
 				System.out.println("I want to try to make " + food + ".");
 			}
-		public void askForHomeworkHelp()
+
+		public void askForHomeworkHelp() // method
 			{
-				System.out.println("Chi, help me NOW.");
+				System.out.println("Jo, help me NOW.");
+			}
+
+		public void sleepLate() // concrete method
+			{
+				System.out.println("I have a project due at 8 am.");
 			}
 	}
